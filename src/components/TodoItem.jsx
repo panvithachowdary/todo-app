@@ -5,12 +5,12 @@ function TodoItem({ todo, toggleTodo, deleteTodo }) {
         className={todo.completed ? "done" : ""}
         onClick={() => toggleTodo(todo.id)}
       >
-        {todo.completed ? "✅ " : "📌 "}
+        {todo.completed ? "✔️ " : "⚡ "}
         {todo.text}
       </span>
 
       <button onClick={() => deleteTodo(todo.id)}>
-        Delete
+        ✖
       </button>
     </div>
   );
