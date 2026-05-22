@@ -3,10 +3,10 @@ import TodoItem from "./TodoItem";
 function TodoList({ todos, toggleTodo, deleteTodo }) {
   return (
     <div>
-      {todos.map((t) => (
+      {todos.map((todo) => (
         <TodoItem
-          key={t.id}
-          todo={t}
+          key={todo.id}
+          todo={todo}
           toggleTodo={toggleTodo}
           deleteTodo={deleteTodo}
         />
