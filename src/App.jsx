@@ -34,9 +34,6 @@ function App() {
         deleteTodo={deleteTodo}
       />
 
-      <footer className="footer">
-        Roll No: 24WH1A0534
-      </footer>
     </div>
   );
 }
