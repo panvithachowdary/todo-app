@@ -7,24 +7,34 @@ function App() {
 
   const addTodo = (text) => {
     if (!text.trim()) return;
-    setTodos([...todos, { id: Date.now(), text, completed: false }]);
+
+    setTodos([
+      ...todos,
+      {
+        id: Date.now(),
+        text,
+        completed: false,
+      },
+    ]);
   };
 
   const toggleTodo = (id) => {
     setTodos(
-      todos.map((t) =>
-        t.id === id ? { ...t, completed: !t.completed } : t
+      todos.map((todo) =>
+        todo.id === id
+          ? { ...todo, completed: !todo.completed }
+          : todo
       )
     );
   };
 
   const deleteTodo = (id) => {
-    setTodos(todos.filter((t) => t.id !== id));
+    setTodos(todos.filter((todo) => todo.id !== id));
   };
 
   return (
     <div className="container">
-      <h1>TODO APP</h1>
+      <h1>✨ TaskFlow</h1>
 
       <TodoForm addTodo={addTodo} />
 
@@ -33,7 +43,6 @@ function App() {
         toggleTodo={toggleTodo}
         deleteTodo={deleteTodo}
       />
-
     </div>
   );
 }
